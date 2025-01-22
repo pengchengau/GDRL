@@ -2,21 +2,21 @@
 
 The simulation code package is related to the following publication. 
 
-Y. Cai, P. Cheng, Z. Chen, W. Xiang, B. Vucetic, and Y. Li, "Graphic Deep Reinforcement Learning for Dynamic Resource Allocation in Space-Air-Ground Integrated Networks," IEEE Journal on Selected Areas in Communications, vol. 43, no. 1, pp. 334-349, January 2025.
+**Y. Cai, P. Cheng, Z. Chen, W. Xiang, B. Vucetic, and Y. Li, "Graphic Deep Reinforcement Learning for Dynamic Resource Allocation in Space-Air-Ground Integrated Networks," IEEE Journal on Selected Areas in Communications, vol. 43, no. 1, pp. 334-349, January 2025.**
 
 Kindly cite this paper if you use this simulation code package in your research.
 
-The author for this code package is Dr. Yue Cai (email: ycai0276@uni.sydney.edu.au).
+The author for this code package is Dr. Yue Cai.
 
-Please refer to https://pengchengau.github.io/ for other related publications and codes. 
+Please visit https://pengchengau.github.io/ for other related publications and code packages.
 
-*********************************************************************************************************************************
+----------------------------------------------------------------------------------------------------
 
-Abstract of the paper: 
+**Abstract**: Space-Air-Ground integrated network (SAGIN) is a crucial component of the 6G, enabling global and seamless communication coverage. This multi-layered communication system integrates space, air, and terrestrial segments, each with computational capability, and also serves as a ubiquitous computing platform. An efficient task offloading and resource allocation scheme is key in SAGIN to maximize resource utilization efficiency, meeting the stringent quality of service (QoS) requirements for different service types. In this paper, we introduce a dynamic SAGIN model featuring diverse antenna configurations, two timescale types, different channel models for each segment, and dual service types. We formulate a problem of sequential decision-making task offloading and resource allocation. Our proposed solution is an innovative online approach referred to as graphic deep reinforcement learning (GDRL). This approach utilizes a graph neural network (GNN)-based feature extraction network to identify the inherent dependencies within the graphical structure of the states. We design an action mapping network with an encoding scheme for end-to-end generation of task offloading and resource allocation decisions. Additionally, we incorporate meta-learning into GDRL to swiftly adapt to rapid changes in key parameters of the SAGIN environment, significantly reducing online deployment complexity. Simulation results validate that our proposed GDRL significantly outperforms state-of-the-art DRL approaches by achieving the highest reward and lowest overall latency.
 
-Space-Air-Ground integrated network (SAGIN) is a crucial component of the 6G, enabling global and seamless communication coverage. This multi-layered communication system integrates space, air, and terrestrial segments, each with computational capability, and also serves as a ubiquitous computing platform. An efficient task offloading and resource allocation scheme is key in SAGIN to maximize resource utilization efficiency, meeting the stringent quality of service (QoS) requirements for different service types. In this paper, we introduce a dynamic SAGIN model featuring diverse antenna configurations, two timescale types, different channel models for each segment, and dual service types. We formulate a problem of sequential decision-making task offloading and resource allocation. Our proposed solution is an innovative online approach referred to as graphic deep reinforcement learning (GDRL). This approach utilizes a graph neural network (GNN)-based feature extraction network to identify the inherent dependencies within the graphical structure of the states. We design an action mapping network with an encoding scheme for end-to-end generation of task offloading and resource allocation decisions. Additionally, we incorporate meta-learning into GDRL to swiftly adapt to rapid changes in key parameters of the SAGIN environment, significantly reducing online deployment complexity. Simulation results validate that our proposed GDRL significantly outperforms state-of-the-art DRL approaches by achieving the highest reward and lowest overall latency.
+----------------------------------------------------------------------------------------------------
 
-This model employs a graph convolutional  neural network (GCN) to extract features from topologicially structured dataset. It encompasses three  parts: 1. LAGN: It is built upon TRPO to generate latent actions. 2. AMN: It is an autoencoder structured network that generate both discrete offloading and continous allocation decisions. 3. GFEN: It is construcuted by GCN to perform feature extraction. 
+Code Explaination: This model employs a graph convolutional  neural network (GCN) to extract features from topologicially structured dataset. It encompasses three  parts: 1. LAGN: It is built upon TRPO to generate latent actions. 2. AMN: It is an autoencoder structured network that generate both discrete offloading and continous allocation decisions. 3. GFEN: It is construcuted by GCN to perform feature extraction. 
 
 ### Requirements
 Code is written in python and requires the installation of `torch`, `argparse`, `stable_baselines3`,  `numpy`, `scipy`, `gymnasium`, `sb3_contrib`, and `itertools` packages. Additionally, Anaconda is required and the version of Python utilized is 3.7. Anaconda can be installed via [Anaconda Webpage](https://anaconda.org/anaconda) by clicking Download Anaconda and other packages can be installed via:
@@ -58,10 +58,9 @@ The main function of each file is described breifly in the following.
 To customize this code, you need to change Environment_baseline.py to your own environment and Feature.py to your own feature extraction network. Data need to be generated as the same shape as that generated by UserStatus.py and HAPSLEO_Status.py and the batch size need to be customized in arg_parser.py. 
 
 ### Model
-![Model](Picture/GDRL.png)
+![GDRL](https://github.com/user-attachments/assets/a03b1de4-4ea9-4e8e-9ae8-547de1b7f3dd)
+
 This figure shows the general achitecture of GDRL. Please refer to our work for further details. The code for each part is lised in the previous code overview section.
-
-
 
 ### Train and Results
 The model can be trained by running the following code
@@ -73,7 +72,6 @@ It is recommanded to run this code using pycharm. Navigate to the main.py functi
 The trained model will be saved in a new folder with the name model_save. It will be automatically created once the training is finished. You can customize the name by modifying model.save("./model_save/trpo_trained"). By default, the model saved is named as trpo_trained. Addtionally, discrete and continous AMN are saved seperatly under the same folder. One can customize the name by modifying the name torch.save(autoencoder_dis.state_dict(), './model_save/autoencoder_dis.pth'), torch.save(autoencoder_con.state_dict(), './model_save/autoencoder_con.pth'). Specifically, the discrete AMN is saved as autoencoder_dis and continous one as autoencoder_con. 
 
 ### Note
-* Please cite our paper if you use this code.
 * The batch size is set to 100 in this code and can be customized by modifying arg_parser.py.
 * Please check your CUDA version before installing torch.
 * New pacekge may need to be installed for enabling the collaboartion between Matlab and Python. 
