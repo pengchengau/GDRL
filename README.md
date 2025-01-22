@@ -16,7 +16,7 @@ Please visit https://pengchengau.github.io/ for other related publications and c
 
 ----------------------------------------------------------------------------------------------------
 
-Code Explaination: This model employs a graph convolutional  neural network (GCN) to extract features from topologicially structured dataset. It encompasses three  parts: 1. LAGN: It is built upon TRPO to generate latent actions. 2. AMN: It is an autoencoder structured network that generate both discrete offloading and continous allocation decisions. 3. GFEN: It is construcuted by GCN to perform feature extraction. 
+**Code Explaination:** This model employs a graph convolutional  neural network (GCN) to extract features from topologicially structured dataset. It encompasses three  parts: 1. LAGN: It is built upon TRPO to generate latent actions. 2. AMN: It is an autoencoder structured network that generate both discrete offloading and continous allocation decisions. 3. GFEN: It is construcuted by GCN to perform feature extraction. 
 
 ### Requirements
 Code is written in python and requires the installation of `torch`, `argparse`, `stable_baselines3`,  `numpy`, `scipy`, `gymnasium`, `sb3_contrib`, and `itertools` packages. Additionally, Anaconda is required and the version of Python utilized is 3.7. Anaconda can be installed via [Anaconda Webpage](https://anaconda.org/anaconda) by clicking Download Anaconda and other packages can be installed via:
