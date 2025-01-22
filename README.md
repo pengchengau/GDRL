@@ -1,13 +1,14 @@
-# GDRL
-This simulation code package is mainly used to reproduce the results of the following paper:
+# Graphic Deep Reinforcement Learning for Dynamic Resource Allocation in Space-Air-Ground Integrated Networks - GDRL Simulation Code Package
 
-Y. Cai, P. Cheng, Z. Chen, W. Xiang, B. Vucetic, and Y. Li, "Graphic Deep Reinforcement Learning for Dynamic Resource Allocation in Space-Air-Ground Integrated Networks," IEEE Journal on Selected Areas in Communications, vol. 43, no. 1, pp. 334-349, January 2025. 
+The simulation code package is related to the following publication. 
 
-If you use this simulation code package in any way, please cite the original paper [1] above. 
+Y. Cai, P. Cheng, Z. Chen, W. Xiang, B. Vucetic, and Y. Li, "Graphic Deep Reinforcement Learning for Dynamic Resource Allocation in Space-Air-Ground Integrated Networks," IEEE Journal on Selected Areas in Communications, vol. 43, no. 1, pp. 334-349, January 2025.
 
-The author in charge of this simulation code pacakge is: Yue Cai (email: ycai0276@uni.sydney.edu.au).
+Kindly cite this paper if you use this simulation code package in your research.
 
-Copyright reserved by the Intelligent Sensing Laboratory (led by Dr. Peng Cheng), Department of Electronic Engineering, La Trobe University, Melbourne, Australia 
+The author for this code package is Dr. Yue Cai (email: ycai0276@uni.sydney.edu.au).
+
+Please refer to https://pengchengau.github.io/ for other related publications and codes. 
 
 *********************************************************************************************************************************
 
